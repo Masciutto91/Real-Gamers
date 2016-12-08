@@ -1,0 +1,2 @@
+module NintendoHelper
+end

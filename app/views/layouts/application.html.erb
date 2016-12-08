@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Real-Gamers" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <div class="contain-to-grid sticky">
+
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a class="logo show-for-small-only" href="#"><img src="http://placehold.it/50x50" /></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+
+
+
+          <!-- Right Nav Section -->
+          <ul class="center">
+            <li><a href="#"><%= link_to 'Home', controller: 'welcome' %></a></li>
+            <li><a href="#"><%= link_to 'Nintendo', controller: 'nintendo' %></a></li>
+            <li><a href="#"><%= link_to 'Playstation', controller: 'playstation' %></a></li>
+            <li><a href="#"><%= link_to 'Xbox', controller: 'xbox' %></a></li>
+          </ul>
+
+
+
+        </section>
+      </nav>
+
+    </div><!-- /navigation -->
+    <div class="large-1 small-1 columns right">
+
+      <a href="#">
+        <div class="panel callout radius">
+          <h6>0&nbsp; Items In Your Cart</h6>
+        </div>
+      </a>
+
+
+    </div>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>
+
+
+
+
+<!-- Footer -->
+
+
+
+<footer class="row">
+
+  <div class="large-12 columns">
+
+    <hr>
+
+    <div class="row">
+
+      <div class="large-6 columns">
+
+
+        <p style="color:#FFFFFF;">&copy; Copyright no one at all. Go to town.</p>
+
+      </div>
+
+      <div class="large-6 columns">
+
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
